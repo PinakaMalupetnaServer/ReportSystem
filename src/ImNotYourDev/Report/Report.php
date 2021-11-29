@@ -12,6 +12,10 @@ use ImNotYourDev\Report\tasks\ReportReset;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
+use CortexPE\DiscordWebhookAPI\Message;
+use CortexPE\DiscordWebhookAPI\Webhook;
+use CortexPE\DiscordWebhookAPI\Embed;
+
 class Report extends PluginBase
 {
     public static $instance;
@@ -39,12 +43,6 @@ class Report extends PluginBase
         $this->getServer()->getCommandMap()->register("reportadmin", new AdminCommand("reportadmin"));
         $this->getServer()->getCommandMap()->register("reportlist", new ReportListCommand("reportlist"));
 
-        if($this->getServer()->getPluginManager()->getPlugin("PixelgamesToDiscord") != null){
-            if($this->getPluginConfig()->get("discord")){
-                $this->discord = true;
-                PGTD::getInstance()->sendMessage(array("message" => "ReportSystem is now connected!"), PGTD::TYPE_PLUGIN);
-            }
-        }
 
         $this->getLogger()->info("§7System mode: §e" . $this->mode);
         $this->getLogger()->info($this->prefix . "ReportSystem by ImNotYourDev enabled!");
@@ -114,6 +112,7 @@ class Report extends PluginBase
             ];
             $cfg->setNested("reports.$reportname$int", $report);
             $cfg->save();
+
         }else{
             $cfg = new Config("/reports/reports.yml", Config::YAML);
             $int = count($cfg->get("reports", [])) + 1; //no overwrite
@@ -129,6 +128,27 @@ class Report extends PluginBase
             $cfg->setNested("reports.$reportname$int", $report);
             $cfg->save();
         }
+
+        $whook = $this->getConfig()->get('webhook');
+        $webhook = new Webhook($whook);
+
+        $msg = new Message();
+        $msg->setUsername("ReportSystem");
+        $msg->setAvatarURL("https://i.redd.it/zqt8kbw3a8p01.jpg");
+        $msg->setContent("**New Report** from Server");
+
+        $embed = new Embed();
+        $embed->setTitle("Report");
+        $embed->setColor(0xFF0000);
+        $embed->addField("Report Name", $reportname);
+        $embed->addField("Player Name", $playername, true);
+        $embed->addField("Description", $desc, true);
+        $embed->addField("Other Notes", $notizen, true);
+        $embed->addField("Reported By", $reporter, true);
+        $embed->setFooter("ReportSystem");
+        $msg->addEmbed($embed);
+
+        $webhook->send($msg);
     }
 
     /**
