@@ -12,7 +12,7 @@ Simple and clean reportsystem with UI's for everyone!
     - [x] /reportadmin
 - [x] Admin
     - [x] Admin ui
-    - [ ] Direct ban
+    - [x] Direct ban
     - [x] Send report to all op's and permitted players
 - [x] Missing Features
     - [x] Modular system
