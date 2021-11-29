@@ -4,6 +4,8 @@ Simple and clean reportsystem with UI's for everyone!
 
 > Equipped and Integrated with [CortexPE/DiscordWebhookAPI](https://github.com/CortexPE/DiscordWebhookAPI)
 
+> Direct Ban is now Supported, **compatible with or without [cucumber](https://github.com/Lycol50/cucumber) plugin!**
+
 ## Todo List
 
 - [x] Commands
