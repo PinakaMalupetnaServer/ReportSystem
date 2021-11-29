@@ -14,13 +14,13 @@ class ReviewReportForm extends MenuForm
     public function __construct(array $report)
     {
         $this->report = $report;
-        $title = "§cReportSystem §7> §eReview";
+        $title = "§6ReportSystem §7>§f Review";
         $text = "§7Reportname: §e" . $report["name"] . "\n§7Reporter: §e" . $report["reporter"] . "\n§7Reported player: §e" . $report["player"] . "\n§7Description: §e" . $report["desc"] . "\n§7Notes: §e" . $report["notes"] . "\n\n§7Choose now what u want to do";
         $options = [
-            new MenuOption("§7Teleport(only if online)"),
+            new MenuOption("§1Teleport(only if online)"),
             new MenuOption("§cBan player(soon)"),
             new MenuOption("§4Delete report"),
-            new MenuOption("§cBack")
+            new MenuOption("§aBack")
         ];
 
         Report::getInstance()->setReviewed($report["nestdir"]);
