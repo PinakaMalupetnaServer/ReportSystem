@@ -31,6 +31,7 @@ class ReportCommand extends Command
     {
         if($sender instanceof Player){
             $sender->sendForm(new PlayerReportForm());
+
         }
         return false;
     }
