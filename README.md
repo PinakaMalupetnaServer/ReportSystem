@@ -1,8 +1,8 @@
 # ReportSystem - modular Reportsystem
 Simple and clean reportsystem with UI's for everyone!
-<br>This plugin use [dktapps](https://github.com/dktapps) great [pmforms](https://github.com/dktapps-pm-pl/pmforms) API library.
-This Reportsystem is useable for one mc server network types like [Minehub](https://minehub.de) or [Server.pro](https://server.pro) servers and also for bigger networks with more than one mc server!
-<br>NEW: Discord Integration! Just install [PixelgamesToDiscord](https://github.com/honorgamerhd/pixelgamestodiscord) put in your webhook link and enable discord integration in this plugins configuration!
+<br>This plugin use [dktapps](https://github.com/dktapps) great [pmforms](https://github.com/dktapps-pm-pl/pmforms) API library. (although old but functional at least)
+
+> Equipped and Integrated with [CortexPE/DiscordWebhookAPI](https://github.com/CortexPE/DiscordWebhookAPI)
 
 ## Todo List
 
@@ -34,14 +34,7 @@ This Reportsystem is useable for one mc server network types like [Minehub](http
 - [x] API for other plugins
 
 ## Where can i download ReportSystem?
-### Download phar
-You can download latest phar at [poggit](https://poggit.pmmp.io/ci/HonorGamerHD/ReportSystem/ReportSystem)
-
-### Download zip
-You can download this plugin as zip and run this as folder plugin(needs [Devtools](https://poggit.pmmp.io/p/DevTools/1.13.4))
-
-### Clone repo into local repo
-You can clone this plugin into your IDE(needs [Git](https://git-scm.com/))
+> Coming soon
 
 ## Permissions
 ### /report
@@ -83,3 +76,4 @@ create an new pull request and help me to develop this reportsystem!
 
 ## Collaborators
 - [HonorGamerHD aka ImNotYourDev](https://github.com/honorgamerhd)
+- [princepines/Lycol50](https://github.com/Lycol50)
