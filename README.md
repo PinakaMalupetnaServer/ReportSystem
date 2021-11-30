@@ -1,4 +1,4 @@
-# ReportSystem - modular Reportsystem
+# ReportSystem - modular ReportSystem
 Simple and clean reportsystem with UI's for everyone!
 <br>This plugin use [dktapps](https://github.com/dktapps) great [pmforms](https://github.com/dktapps-pm-pl/pmforms) API library. (although old but functional at least)
 
