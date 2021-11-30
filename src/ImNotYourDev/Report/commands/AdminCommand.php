@@ -5,7 +5,7 @@ namespace ImNotYourDev\Report\commands;
 use ImNotYourDev\Report\forms\AdminForm;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class AdminCommand extends Command
 {
@@ -22,7 +22,7 @@ class AdminCommand extends Command
     {
         if($sender->hasPermission("reportsystem.admin")){
             if($sender instanceof Player){
-                $sender->sendForm(new AdminForm());
+                $sender->sendForm(new AdminForm()); // idk if forms is implemented.
             }
         }
         return false;
