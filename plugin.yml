@@ -2,7 +2,7 @@ name: Report
 main: ImNotYourDev\Report\Report
 api: 3.0.0
 version: 1.5
-author: ImNotYourDev, princepines
+author: ImNotYourDev, Lycol50
 
 permissions:
   reportsystem.admin:
