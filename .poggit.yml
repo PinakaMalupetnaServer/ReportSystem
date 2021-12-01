@@ -1,0 +1,12 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/PinakaMalupetnaServer/ReportSystem
+build-by-default: true
+branches:
+- API4
+projects:
+  ReportSystem:
+    path: ""
+    libs:
+      - src: CortexPE/DiscordWebhookAPI/DiscordWebhookAPI
+        version: ^1.0.2
+        branch: PM4
+...
