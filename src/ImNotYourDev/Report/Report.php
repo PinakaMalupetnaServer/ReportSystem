@@ -22,8 +22,7 @@ class Report extends PluginBase
     public $mode = "local";
     public $unreviewed = false;
 
-    public function onEnable()
-    {
+    protected function onEnable() : void {
         self::$instance = $this;
         $this->saveResource("config.yml");
         $this->mode = $this->getPluginConfig()->get("mode");
@@ -152,8 +151,7 @@ class Report extends PluginBase
     /**
      * NOTE: maybe not the best thing but wokring!
      */
-    public function sendReportToMod()
-    {
+    public function sendReportToMod() {
         if($this->mode == "local"){
             foreach ($this->getServer()->getOnlinePlayers() as $player){
                 if($player->hasPermission("reportssystem.admin")){
