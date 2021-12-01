@@ -14,7 +14,7 @@ class ReportListCommand extends Command
         $description = "show you an list of all reports";
         $usageMessage = "/reportlist";
         $aliases = ["reportlst"];
-        $this->setPermission("reportsystem.list");
+        // $this->setPermission("reportsystem.list");
         parent::__construct($name, $description, $usageMessage, $aliases);
     }
 
