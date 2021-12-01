@@ -16,7 +16,7 @@ class AdminForm extends MenuForm
         $options = [
             new MenuOption("§cReport List"),
             new MenuOption("§7Recycle Bin"),
-            new MenuOption("§aExit")
+            //new MenuOption("§aExit")
         ];
         parent::__construct($title, $text, $options, function (Player $player, $data) : void {
             if($data == 0){
@@ -24,7 +24,8 @@ class AdminForm extends MenuForm
             }elseif($data == 1){
                 $player->sendForm(new RecycleBinForm()); // idk if forms is implemented.
             }else{
-                $player->removeAllWindows(); // Might not be compatible to API4 as of now..
+                //$player->removeAllWindows(); // Might not be compatible to API4 as of now..
+                return;
             }
             return;
         });
